@@ -9,19 +9,60 @@ public class PasswordValidatorTest {
 
     @Test
     public void whenValidatingPassword_andItsTooShort_returnFalse() {
-        var hasValidLength = PasswordValidator.hasValidLength("12345");
+        // Arrange
+        var passwordInput = "12345";
+
+        // Act
+        var hasValidLength = PasswordValidator.hasValidLength(passwordInput);
+
+        // Assert
         assertFalse(hasValidLength);
     }
 
     @Test
     public void whenValidatingPassword_andItContainsNoSpecialCharacter_thenReturnFalse() {
-        var hasSpecialCharacter = PasswordValidator.hasSpecialCharacter("12345");
+        // Arrange
+        var passwordInput = "12345";
+
+        // Act
+        var hasSpecialCharacter = PasswordValidator.hasSpecialCharacter(passwordInput);
+
+        // Assert
         assertFalse(hasSpecialCharacter);
     }
 
     @Test
     public void whenValidatingPassword_andItContainsSpecialCharacter_thenReturnTrue() {
-        var hasSpecialCharacter = PasswordValidator.hasSpecialCharacter("12345%");
+        // Arrange
+        var passwordInput = "12345%";
+
+        // Act
+        var hasSpecialCharacter = PasswordValidator.hasSpecialCharacter(passwordInput);
+
+        // Assert
         assertTrue(hasSpecialCharacter);
+    }
+
+    @Test
+    public void whenValidatingPassword_andItContainsUpperCase_thenReturnTrue() {
+        // Arrange
+        var passwordInput = "ABCabc123";
+
+        // Act
+        var hasUpperCaseCharacter = PasswordValidator.hasUpperCaseCharacter(passwordInput);
+
+        // Assert
+        assertTrue(hasUpperCaseCharacter);
+    }
+    @Test
+    public void whenValidatingPassword_andItContainsNoUpperCase_thenReturnFalse() {
+        // Arrange
+        var passwordInput = "abcabc123";
+
+        // Act
+        var hasUpperCaseCharacter = PasswordValidator.hasUpperCaseCharacter(passwordInput);
+
+        // Assert
+        assertFalse(hasUpperCaseCharacter);
     }
 }

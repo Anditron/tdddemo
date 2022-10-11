@@ -1,8 +1,5 @@
 package org.example;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-
 public class PasswordValidator {
 
     public static boolean hasValidLength(String password) {
@@ -19,5 +16,9 @@ public class PasswordValidator {
         }
 
         return false;
+    }
+
+    public static boolean hasUpperCaseCharacter(String password) {
+        return !password.toLowerCase().equals(password);
     }
 }
