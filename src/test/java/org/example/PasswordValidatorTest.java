@@ -42,25 +42,4 @@ public class PasswordValidatorTest {
         // Assert
         assertTrue(hasSpecialCharacter);
     }
-
-    @Test
-    public void whenValidatingPassword_andItContainsUpperCase_thenReturnTrue() {
-        // Arrange
-        var passwordInput = "ABCabc123";
-
-        // Act
-
-        // Assert
-        assertTrue(false);
-    }
-    @Test
-    public void whenValidatingPassword_andItContainsNoUpperCase_thenReturnFalse() {
-        // Arrange
-        var passwordInput = "abcabc123";
-
-        // Act
-
-        // Assert
-        assertTrue(false);
-    }
 }
