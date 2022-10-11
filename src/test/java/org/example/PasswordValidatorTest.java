@@ -49,10 +49,9 @@ public class PasswordValidatorTest {
         var passwordInput = "ABCabc123";
 
         // Act
-        var hasUpperCaseCharacter = PasswordValidator.hasUpperCaseCharacter(passwordInput);
 
         // Assert
-        assertTrue(hasUpperCaseCharacter);
+        assertTrue(false);
     }
     @Test
     public void whenValidatingPassword_andItContainsNoUpperCase_thenReturnFalse() {
@@ -60,9 +59,8 @@ public class PasswordValidatorTest {
         var passwordInput = "abcabc123";
 
         // Act
-        var hasUpperCaseCharacter = PasswordValidator.hasUpperCaseCharacter(passwordInput);
 
         // Assert
-        assertFalse(hasUpperCaseCharacter);
+        assertTrue(false);
     }
 }

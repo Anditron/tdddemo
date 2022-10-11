@@ -17,8 +17,4 @@ public class PasswordValidator {
 
         return false;
     }
-
-    public static boolean hasUpperCaseCharacter(String password) {
-        return !password.toLowerCase().equals(password);
-    }
 }
